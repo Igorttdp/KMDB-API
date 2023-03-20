@@ -11,7 +11,6 @@ class ReviewView(generics.ListCreateAPIView):
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsCriticOrAdminOrReadOnly]
 
-    queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
     def get_queryset(self):
