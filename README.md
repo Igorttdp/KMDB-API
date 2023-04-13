@@ -11,7 +11,7 @@
             <li><a href="#post-apilogin">POST /api/login/</a></li>
             <li><a href="#get-apiusers">GET /api/users/</a></li>
             <li>
-                <i id="admin-cli">Criando usuário ADMIN via CLI</i>
+                <i>Criando usuário ADMIN via CLI</i>
                 <ul>
                     <li><a href="#admin-padrão">Admin Padrão</a></li>
                     <li><a href="#admin-personalizado">Admin Personalizado</a></li>
@@ -254,7 +254,7 @@ Retorna todos os usuários registrados no banco de dados desde que o token tenha
 
 <br/>
 
-<details>
+<details id="admin-cli">
 
 <summary>Criação de usuário admin via CLI</summary>
 
