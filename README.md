@@ -1,3 +1,32 @@
+## Sumário
+
+<ul>
+    <li><a href="#kmdb-api">KMDB-API</a></li>
+    <li><a href="##iniciando-a-aplicação">Iniciando a aplicação</a></li>
+    <li><a href="#rodando-o-projeto">Rodando o projeto</a></li>
+    <li>
+        <a href="#endpoints">Endpoints</a>
+        <ul>
+            <li><a href="#post-apiusers">POST /api/users/</a></li>
+            <li><a href="#post-apilogin">POST /api/login/</a></li>
+            <li><a href="#get-apiusers">GET /api/users/</a></li>
+            <li>
+                <i>Criando usuário ADMIN via CLI</i>
+                <ul>
+                    <li><a href="#admin-padrão">Admin Padrão</a></li>
+                    <li><a href="#admin-personalizado">Admin Personalizado</a></li>
+                    <li><a href="#aviso">Possíveis Erros</a></li>
+                </ul>
+            </li>
+            <li><a href="#get-apimovies">GET /api/movies/</a></li>
+            <li><a href="#post-apimovies">POST /api/movies/</a></li>
+        </ul>
+    </li>
+
+</ul>
+
+<br/><br/>
+
 # KMDB-API
 
 Uma API para gerenciamento de filmes e reviews.
@@ -16,7 +45,7 @@ Uma API para gerenciamento de filmes e reviews.
 python -m venv venv
 ```
 
-<blockquote>Obs: o segundo "venv" é o nome da pasta que deseja criar para a instalação dos pacotes, porém por boas práticas aconselhamos manter dessa forma!</blockquote>
+> Obs: o segundo "venv" é o nome da pasta que deseja criar para a instalação dos pacotes, porém por boas práticas aconselhamos manter dessa forma!
 
 <br/>
 
@@ -58,7 +87,7 @@ Set-ExecutionPolicy AllSigned
 
 <br/>
 
-<blockquote>Obs: caso esteja utilizando o bash do Git, o comando para ativar o ambiente virtual é o seguinte:</blockquote>
+> Obs: caso esteja utilizando o bash do Git, o comando para ativar o ambiente virtual é o seguinte:
 
 <br/>
 
@@ -129,7 +158,7 @@ Content-Type: application/json
 }
 ```
 
-<blockquote>O campo `is_critic`, caso true, referencia esse usuário como sendo um crítico de filmes. Um usuário `crítico` pode criar e publicar reviews dos filmes presentes no banco de dados da aplicação.</blockquote>
+> O campo `is_critic`, caso true, referencia esse usuário como sendo um crítico de filmes. Um usuário `crítico` pode criar e publicar reviews dos filmes presentes no banco de dados da aplicação.
 
 <br/>
 
@@ -210,7 +239,7 @@ Vary: Accept
 Inclua o token JWT em todas as requisições subsequentes no header `Authorization` utilizando o prefixo `Bearer`, como no exemplo abaixo:
 
 ```json
-Authorization: {
+"Authorization": {
     "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNTA0Mzc1LCJpYXQiOjE2ODE0MTc5NzUsImp0aSI6ImVlMGVmYTlhN2UzYjQ0ZmE4Yjk2ZTliZTJjNGE4Zjk2IiwidXNlcl9pZCI6IjA4YTFmOWYwLWMwZmQtNDM1Yi05NzVmLTAwMzViMzc0OWE4YiJ9.jmHLaBVYArfqoMLwbX10DiaElJPvF0B6_8qhhqglZ_8"
 }
 ```
@@ -221,7 +250,7 @@ Authorization: {
 
 Retorna todos os usuários registrados no banco de dados desde que o token tenha permissão de `Administrador`.
 
-<blockquote>Só é possível criar um usuário administrador (super-usuário) por meio de um comando via CLI chamado "create_admin". Veja abaixo um exemplo</blockquote>
+> Só é possível criar um usuário administrador (super-usuário) por meio de um comando via CLI chamado "create_admin". Veja abaixo um exemplo
 
 <br/>
 
@@ -247,9 +276,9 @@ Resposta:
 Admin `admin` successfully created!
 ```
 
-<blockquote>Nota: Os dados para logar são: 
-<br/> username: admin
-<br/> password: admin1234</blockquote>
+> Nota: Os dados para logar são:
+> <br/> username: admin
+> <br/> password: admin1234
 
 <br/>
 
@@ -267,9 +296,7 @@ Resposta:
 Admin `Igor` successfully created!
 ```
 
-<blockquote>Nota: Os atributos "--name", "--email" e "--password" são opcionais e se não forem passados, utilizarão os valores pré-definidos "name = Admin", "password = Admin1234" e "email = admin@mail.com</blockquote>
-<br/>
-
+> Nota: Os atributos "--name", "--email" e "--password" são opcionais e se não forem passados, utilizarão os valores pré-definidos "name = Admin", "password = Admin1234" e "email = admin@mail.com > <br/>
 
 ## `Aviso`
 
@@ -424,7 +451,7 @@ Content-Type: application/json
 }
 ```
 
-<blockquote>O campo genres deve ser uma lista de gêneros. Estes podem ser existentes ou não no banco de dados. Se o gênero não for existente, então ele será criado, caso contrário o gênero existente será referenciado no objeto de `Movie`.</blockquote>
+> O campo genres deve ser uma lista de gêneros. Estes podem ser existentes ou não no banco de dados. Se o gênero não for existente, então ele será criado, caso contrário o gênero existente será referenciado no objeto de `Movie`.
 
 <br/>
 
@@ -450,4 +477,3 @@ Exemplo de resposta:
   "overview": "Com o preço por sua cabeça cada vez maior, o lendário assassino de aluguel John Wick leva sua luta contra o High Table global enquanto procura os jogadores mais poderosos do submundo, de Nova York a Paris, do Japão a Berlim."
 }
 ```
-
