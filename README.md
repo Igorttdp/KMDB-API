@@ -22,7 +22,7 @@
             <li><a href="#post-apimovies">POST /api/movies/</a></li>
         </ul>
     </li>
-
+    <li><a href="#utilizando-o-django-admin-site">Utilizando o Django Admin Site</a></li>
 </ul>
 
 <br/><br/>
@@ -477,3 +477,19 @@ Exemplo de resposta:
   "overview": "Com o preço por sua cabeça cada vez maior, o lendário assassino de aluguel John Wick leva sua luta contra o High Table global enquanto procura os jogadores mais poderosos do submundo, de Nova York a Paris, do Japão a Berlim."
 }
 ```
+
+<br/><br>
+
+## Utilizando o Django Admin Site
+
+`Django Admin Site` é uma interface no frontend projetada para facilitar o gerenciamento de inserção e remoção de dados. Você pode utiliza-lá se tiver acesso de administrador.
+
+<img src="./assets/djangoAdminSite.png" alt="Django Admin Site"/>
+
+Para acessar, basta colocar as informações do usuário administrador e clicar em "Log In". Caso ainda não tenha criado um usuário admin, clique aqui: <a href="#admin-padrão">Criação de usuário admin via CLI</a>.
+
+<br/>
+
+<img src="./assets/djangoAdmSiteOverview.png" alt="Django Admin Site Overview"/>
+
+Aqui você tem acesso a todas as tabelas do banco de dados, assim como acesso a ações de criação e remoção de todos os dados!
