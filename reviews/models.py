@@ -8,5 +8,9 @@ class Review(models.Model):
     review = models.TextField()
     spoilers = models.BooleanField(default=False)
 
-    movie = models.ForeignKey("movies.Movie", related_name="reviews", on_delete=models.CASCADE)
-    critic = models.ForeignKey("users.User", related_name="reviews", on_delete=models.CASCADE)
+    movie = models.ForeignKey(
+        "movies.Movie", related_name="reviews", on_delete=models.CASCADE
+    )
+    critic = models.ForeignKey(
+        "users.User", related_name="reviews", on_delete=models.CASCADE
+    )
