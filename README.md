@@ -11,7 +11,7 @@
             <li><a href="#post-apilogin">POST /api/login/</a></li>
             <li><a href="#get-apiusers">GET /api/users/</a></li>
             <li>
-                <i>Criando usuário ADMIN via CLI</i>
+                <i id="admin-cli">Criando usuário ADMIN via CLI</i>
                 <ul>
                     <li><a href="#admin-padrão">Admin Padrão</a></li>
                     <li><a href="#admin-personalizado">Admin Personalizado</a></li>
@@ -486,7 +486,7 @@ Exemplo de resposta:
 
 <img src="./assets/djangoAdminSite.png" alt="Django Admin Site"/>
 
-Para acessar, basta colocar as informações do usuário administrador e clicar em "Log In". Caso ainda não tenha criado um usuário admin, clique aqui: <a href="#admin-padrão">Criação de usuário admin via CLI</a>.
+Para acessar, basta colocar as informações do usuário administrador e clicar em "Log In". Caso ainda não tenha criado um usuário admin, clique aqui: <a href="#admin-cli">Criação de usuário admin via CLI</a>.
 
 <br/>
 
