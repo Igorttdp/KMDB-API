@@ -6,8 +6,30 @@ class IsAdminOrReadOnly(BasePermission):
     def has_permission(self, request: Request, view: View):
         return (
             request.method in SAFE_METHODS
-            and request.user
+            or request.user
             and request.user.is_authenticated
             and request.user.is_superuser
-            or request.method == "POST"
+        )
+    
+
+class IsCriticOrAdminOrReadOnly(BasePermission):
+    def has_permission(self, request: Request, view: View):
+        return (
+            request.method in SAFE_METHODS
+            or request.user
+            and request.user.is_authenticated
+            and request.user.is_superuser
+            or request.user
+            and request.user.is_authenticated
+            and request.user.is_critic
+        )
+
+
+class CreateUserOrAdmin(BasePermission):
+    def has_permission(self, request: Request, view: View):
+        return (
+            request.method == "POST"
+            or request.user
+            and request.user.is_authenticated
+            and request.user.is_superuser
         )
