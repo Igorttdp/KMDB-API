@@ -199,7 +199,7 @@ Parâmetros de requisição:
 Retorno:
 
 <ul>
-    <li>status 200: Uusário autenticado com sucesso</li>
+    <li>status 200: Usuário autenticado com sucesso</li>
     <li>status 400: Dados não passaram pela validação</li>
     <li>status 401: Dados incorretos</li>
 </ul>
